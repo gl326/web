@@ -1,0 +1,8 @@
++++
+title = "Chicory PHYSICAL EDITIONS available now for Switch and PS5!"
+slug = "chicory-physical-editions-available"
+description = "Pre-order a physical edition of Chicory on Switch or Ps5!"
+[taxonomies]
+tags = ["archived",]
++++
+<p>YES!!!! Pre-orders are now available for Chicory physical game editions for Nintendo Switch and Sony Playstation 5. </p><figure><img src="1.png"></figure><p>The Collector’s Edition comes with a ton of extra one-of-a-kind goodies. :) The Coloring Book in particular has a ton of new pieces commissioned from fans and friends, featuring some of our favorite characters in new scenes.</p><p>We’ve been working pretty hard on these in the background and are thrilled to finally show this off to you. It’s a special thing for us as a team, because we all adore this game and selfishly want to have physical copies of our own, heh heh… </p><p>These will only be available for a limited time, until December 15!</p><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://limitedrungames.com/products/chicory-a-colorful-tale-standard-edition-switch-ps5&quot;,&quot;text&quot;:&quot;Pre-order your physical copy here!&quot;,&quot;action&quot;:null,&quot;class&quot;:null}" data-component-name="ButtonCreateButton"><a class="button primary" href="https://limitedrungames.com/products/chicory-a-colorful-tale-standard-edition-switch-ps5"><span>Pre-order your physical copy here!</span></a></p><p></p>

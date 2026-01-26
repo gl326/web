@@ -1,0 +1,8 @@
++++
+title = "Introducing... the Official Chicory Artbook!"
+slug = "introducing-the-official-chicory"
+description = "189 pages of juicy details, sketches and more!"
+[taxonomies]
+tags = ["archived",]
++++
+<figure><img src="1.png"></figure><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://banov.itch.io/chicory-a-colorful-art-book&quot;,&quot;text&quot;:&quot;Check it out HERE!&quot;,&quot;action&quot;:null,&quot;class&quot;:null}" data-component-name="ButtonCreateButton"><a class="button primary" href="https://banov.itch.io/chicory-a-colorful-art-book"><span>Check it out HERE!</span></a></p><p>It’s been a long time coming. We’re proud to reveal this 189-page official digital artbook for Chicory :) We had promised to (and wanted to!) make this for Kickstarter backers… but what started off as a seemingly simple project became a long journey for us. We collected art and notes from many years of development and worked with a fabulous layout artist (Hayley Ng!) to make a professional final package.</p><p>There are concept drawings, sketches, articles, interviews, never-before-seen characters and all manner of juicy process details to uncover in here. We wanted to give fans a new peek into the world, but we also wanted to share our process in a way that we think any creator can get inspired by.</p><p>We’re very proud of this and are excited to finally share it with you all!!! We hope you love it.</p><p></p>

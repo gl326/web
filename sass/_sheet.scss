@@ -52,7 +52,8 @@ h3 {
 a {
     color: $blue;
     &:hover {
-        color: $pink;
+        background-color:$yellow;
+        //color: $pink;
     }
 }
 
@@ -68,18 +69,26 @@ hr {
 }
 
 .header {
-    background-color: #7b44d8;
+    background-color: $overlay1;
     padding-top: 20px;
-    padding-bottom: 40px;
-    --wave-height: 40px;
-    --wave-width: 80px;
-    -webkit-mask: radial-gradient( circle at 50% calc(100% + var(--wave-height)), #000 60%, #0000 61% ) repeat-x;
-    -webkit-mask-size: var(--wave-width) 100%;
-    mask: radial-gradient( circle at 50% calc(100% + var(--wave-height)), #000 60%, #0000 61% ) repeat-x;
-    mask-size: var(--wave-width) 100%;
+    padding-bottom: 50px;
+    --wave-height: 60px;
+    --wave-width: 60px;
+    -webkit-mask:
+    /* solid area */
+    linear-gradient(#000 0 0),
+    /* cloud bumps */
+    radial-gradient( circle at 50% calc(100% - var(--wave-height)), #000 60%, #0000 61% );
+    -webkit-mask-size: 100% calc(100% - var(--wave-height)), var(--wave-width) calc(var(--wave-height) * 2);
+    -webkit-mask-position: top, bottom;
+    -webkit-mask-repeat: no-repeat, repeat-x;
+    mask: linear-gradient(#000 0 0), radial-gradient( circle at 50% calc(100% - var(--wave-height)), #000 60%, #0000 61% );
+    mask-size: 100% calc(100% - var(--wave-height)), var(--wave-width) calc(var(--wave-height) * 2);
+    mask-position: top, bottom;
+    mask-repeat: no-repeat, repeat-x;
 
     .title {
-        color: $base;
+        color: $yellow;
 
         .main {
             font-family: 'title', sans-serif;
@@ -97,19 +106,42 @@ hr {
 
         .sub {
             font-family: 'title', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
     }
 
     .menu {
         a {
             text-decoration: none;
-            color: $base;
+            color: $yellow;
             font-weight: bold;
 
             &:hover {
+                color: $base;
+            }
+        }
+    }
+
+    .socials {
+        a {
+            color: $blue;
+
+            &:hover {
+                background-color: $yellow;
                 color: $blue;
             }
+        }
+
+        float: right;
+
+        a {
+            padding-right: 3px;
+            padding-left: 3px;
+            font-size: 1.6rem;
+        }
+
+        i {
+            font-size: 1.6rem;
         }
     }
 }
@@ -188,28 +220,31 @@ hr {
             display: flex;
             align-items: center;
         }
+
         .title {
             flex: 1;
         }
+
         .menu {
             .links {
                 .link {
                     display: flex;
                     flex-direction: row-reverse;
-                    i { margin-left: 10px; }
+
+                    i {
+                        margin-left: 10px;
+                    }
+                }
+
+                a {
+                    font-size: 1.1rem;
+                }
+
+                i {
+                    font-size: 1.1rem;
                 }
             }
-            a { font-size: 1.1rem; }
-            i { font-size: 1.1rem; }
         }
-    }
-}
-
-.socials{
-    float: right;
-    a{
-        margin-right:5px;
-        color: $subtext0;
     }
 }
 
@@ -299,9 +334,10 @@ hr {
 }
 
 .footer {
-    border-top: 10px dotted $pink;
-    color: $subtext1;
+    background: #7b44d8;
     text-align: center;
+
+    padding-top:1px;
 
     p {
         font-style: italic;
@@ -422,10 +458,10 @@ blockquote:not(:has(+pre)) {
     }
 
     &:has(i.ri-lightbulb-line) {
-        color: $blue;
-        a, h1 { color: $blue; }
+        color: $yellow;
+        a, h1 { color: $yellow; }
         a:hover { color: $text; }
-        code { border-color: $blue; }
+        code { border-color: $yellow; }
     }
 
     &:has(h2:first-child) {

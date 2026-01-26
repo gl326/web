@@ -68,38 +68,45 @@ hr {
 }
 
 .header {
-    background-color: #ea76cb;
+    background-color: #7b44d8;
     padding-top: 20px;
     padding-bottom: 40px;
-    --a: 90deg; // the angle of the spikes
-    --s: 40px;  // the size of spikes
-    --mask: conic-gradient(from calc(var(--a)/-2) at bottom, #0000,#000 1deg var(--a),#0000 calc(var(--a) + 1deg)) 50%/var(--s);
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+    --wave-height: 40px;
+    --wave-width: 80px;
+    -webkit-mask: radial-gradient( circle at 50% calc(100% + var(--wave-height)), #000 60%, #0000 61% ) repeat-x;
+    -webkit-mask-size: var(--wave-width) 100%;
+    mask: radial-gradient( circle at 50% calc(100% + var(--wave-height)), #000 60%, #0000 61% ) repeat-x;
+    mask-size: var(--wave-width) 100%;
 
     .title {
         color: $base;
+
         .main {
             font-family: 'title', sans-serif;
             font-size: 2rem;
+
             a {
                 text-decoration: none;
                 color: $base;
+
                 &:hover {
                     color: $blue;
                 }
             }
         }
+
         .sub {
             font-family: 'title', sans-serif;
             font-size: 1.5rem;
         }
     }
+
     .menu {
         a {
             text-decoration: none;
             color: $base;
             font-weight: bold;
+
             &:hover {
                 color: $blue;
             }
@@ -195,6 +202,14 @@ hr {
             a { font-size: 1.1rem; }
             i { font-size: 1.1rem; }
         }
+    }
+}
+
+.socials{
+    float: right;
+    a{
+        margin-right:5px;
+        color: $subtext0;
     }
 }
 

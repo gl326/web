@@ -3,6 +3,6 @@ title = "New Studio & Official Discord"
 slug = "new-studio-and-official-discord"
 description = "I have become a Brand now"
 [taxonomies]
-tags = ["archived",]
+tags = ["archived"]
 +++
 <p>Hi! This is something I’ve been working on in the background for a long time. Introducing… <em><strong>Wishes Unlimited!</strong></em></p><figure><img src="1.png"></figure><p>Up until now I’ve simply credited my &amp; my collaborators’ names as the “official developer” of each project I’ve directed. I really liked that more personal style but it had a lot of limitations and challenges, too. Going forward I intend to use this company interchangably with my own name to indicate a project made by me and my friends. </p><p>As part of this reveal we’ve created, for the first time, an official Discord community which is comprised of all the different games and worlds I’ve had a hand in… and it will be a home for future ones too. Whether you’re a fan of <em>Wandersong</em>, <em>Chicory</em>, my older titles, or want to be a part of whatever comes next, let me formally invite you to come hang out with us here!</p><p class="button-wrapper" data-attrs="{&quot;url&quot;:&quot;https://discord.gg/BCrVZQNfwu&quot;,&quot;text&quot;:&quot;Join us on Discord!&quot;,&quot;action&quot;:null,&quot;class&quot;:null}" data-component-name="ButtonCreateButton"><a class="button primary" href="https://discord.gg/BCrVZQNfwu"><span>Join us on Discord!</span></a></p><p>We’re very excited for what’s coming later!</p><p>-Greg</p>

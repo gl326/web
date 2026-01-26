@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+
+  <!-- If you are using pagination, section.pages will be empty.
+       You need to use the paginator object -->  
+  {%- for page in paginator.pages -%}
+  <p><a href="{{ page.extra.url | safe }}" title={{ page.title }}><img src={{ "/games/"~page.slug ~ "/preview.png" }} alt={{ page.title }}></a></p> <!-- {{ page.title }}></ -->
+  {% endfor %}
+</ul>{% endblock content %}

@@ -4,17 +4,17 @@
 {%- block content -%}
 
 <div class="projects">
-    <a href="https://www.humblegames.com/games/ikenfell/" target="_blank" title="Ikenfell">
-        <img src="/img/ikenfell_thumb.png">
-    </a>
-    <a href="https://chevyray.itch.io/" target="_blank" title="175 Pixel Font Megapack">
-        <img src="/img/fonts_thumb.png">
-    </a>
-    <a href="https://chevyray.itch.io/noise1" target="_blank" title="NOISE 1">
-        <img src="/img/noise1_thumb.png">
-    </a>
+    {%- set section = get_section(path="games/_index.md") -%}
+    {%- for page in section.pages | reverse -%}
+        {%- if loop.index > 3 -%}
+            {%- break -%}
+        {%- endif -%}
+        <a href="{{ page.extra.url | safe }}" title={{ page.title }} target="_blank">
+            <img src={{ "/games/"~page.slug ~ "/preview.png" }} alt={{ page.title }}>
+        </a>
+    {%- endfor -%}
     <div class="more-posts">
-    <a class="next" href="/blog">More Posts <i class="ri-arrow-right-line"></i></a> 
+    <a class="next" href="/games">More Games <i class="ri-arrow-right-line"></i></a> 
 </div>
 </div>
 

@@ -108,6 +108,9 @@
                     {{ macros::post_preview(page = page) }}
                 {%- endfor -%}
             </div>
+            <div class="more-posts">
+                <a class="next" href="/archive">Browse All Posts <i class="ri-arrow-right-line"></i></a> 
+            </div>
             {{ macros::pagination_numbers(permalink=permalink) }}
         </div>
     </div>

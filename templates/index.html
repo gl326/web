@@ -3,23 +3,6 @@
 
 {%- block content -%}
 
-<div class="about">
-    <div class="blurb">
-        <div>
-            <p>
-                Hello! I'm a professional indie game developer, worldbuilder, and pixel font designer.
-                This is where I write about game development and help others learn the
-                <a href="https://www.rust-lang.org/" target="_blank">Rust</a> programming language.
-            </p>
-            <p>
-                Some cool things I've made:
-            </p>
-        </div>
-    </div>
-    <div class="portrait">
-        <img src="/img/portrait.png" alt="Cartoon illustration of Chevy, looking pink & black and flamboyant.">
-    </div>
-</div>
 <div class="projects">
     <a href="https://www.humblegames.com/games/ikenfell/" target="_blank" title="Ikenfell">
         <img src="/img/ikenfell_thumb.png">
@@ -30,7 +13,11 @@
     <a href="https://chevyray.itch.io/noise1" target="_blank" title="NOISE 1">
         <img src="/img/noise1_thumb.png">
     </a>
+    <div class="more-posts">
+    <a class="next" href="/blog">More Posts <i class="ri-arrow-right-line"></i></a> 
 </div>
+</div>
+
 
 {{ section.content | safe }}
 

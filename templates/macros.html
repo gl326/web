@@ -40,7 +40,7 @@
 
 {%- macro post_preview(page) -%}
     <div class="post">
-        <div><!-- class="crop-container">-->
+        <div><!-- class="crop-container">--><!--kjdhdj-->
             {% set img_url = macros::img_exists(path=page.path ~ "/1", default="/img/blog_dog.png") -%}
             {% set img_resized = resize_image(path= img_url , width=400, height=200, op="fill") %}
             <a href="{{ page.permalink }}"><img src= {{ img_resized.url }} ></a>

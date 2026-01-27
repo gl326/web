@@ -4,10 +4,78 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
-
+<hr />
   <!-- If you are using pagination, section.pages will be empty.
        You need to use the paginator object -->  
   {%- for page in paginator.pages -%}
-  <p><a href="{{ page.extra.url | safe }}" title={{ page.title }}><img src={{ "/games/"~page.slug ~ "/preview.png" }} alt={{ page.title }}></a></p> <!-- {{ page.title }}></ -->
+  {% if loop.index0 > 3 %}{% break %}{% endif %}
+  <div class="game">
+  	<a href="{{ page.extra.url | safe }}" title={{ page.title }}>
+  		{% set img_url = "/games/"~page.slug ~ "/preview.png" -%}
+        {% set img_resized = resize_image(path= img_url , width=300, height=300, op="fill") %}
+        <img src={{ img_resized.url }} alt={{ page.title }}>
+  	</a>
+  	<div class="game-content">
+	  	<a href="{{ page.extra.url | safe }}" title={{ page.title }}><h1>{{ page.title }}</h1></a>
+
+	    <div class="post-meta">
+	        <span class="item">
+	            <i class="ri-calendar-schedule-fill"></i>
+			    {%- if page.date -%}
+			    	{%- if not page.updated -%}
+			        	In development since:
+			    	{%- endif -%}
+		            <span class="date">{{ page.date | safe }}</span>
+		            {%- if page.updated -%}
+		            	to <span class="date">{{ page.updated | safe }}</span>
+		    		{%- endif -%}
+		    	{%- else -%}
+		    		<span class="date">{{ page.updated | safe }}</span>
+		    	{%- endif -%}
+	        </span>
+	    </div>
+	  	<div class="game-details">
+	  		{{ page.content | safe }}
+	  	</div>
+	  </div>
+  </div> <!-- {{ page.title }}></ -->
+  {% endfor %}
+  <hr />
+  <h1 class="title">
+	  Back Catalogue
+	</h1>
+	<hr/>
+  {%- for page in paginator.pages -%}
+  {% if loop.index0 <= 3 %}{% continue %}{% endif %}
+  <div class="game">
+  	<a href="{{ page.extra.url | safe }}" title={{ page.title }}>
+  		{% set img_url = "/games/"~page.slug ~ "/preview.png" -%}
+        {% set img_resized = resize_image(path= img_url , width=300, height=300, op="fill") %}
+        <img src={{ img_resized.url }} alt={{ page.title }}>
+  	</a>
+  	<div class="game-content">
+	  	<a href="{{ page.extra.url | safe }}" title={{ page.title }}><h1>{{ page.title }}</h1></a>
+
+	    <div class="post-meta">
+	        <span class="item">
+	            <i class="ri-calendar-schedule-fill"></i>
+			    {%- if page.date -%}
+			    	{%- if not page.updated -%}
+			        	In development since:
+			    	{%- endif -%}
+		            <span class="date">{{ page.date | safe }}</span>
+		            {%- if page.updated -%}
+		            	to <span class="date">{{ page.updated | safe }}</span>
+		    		{%- endif -%}
+		    	{%- else -%}
+		    		<span class="date">{{ page.updated | safe }}</span>
+		    	{%- endif -%}
+	        </span>
+	    </div>
+	  	<div class="game-details">
+	  		{{ page.content | safe }}
+	  	</div>
+	  </div>
+  </div> <!-- {{ page.title }}></ -->
   {% endfor %}
 </ul>{% endblock content %}

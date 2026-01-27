@@ -28,7 +28,7 @@ h1 {
     color: $text;
 
     &.latest {
-        border-bottom: 4px dotted $surface2;
+        border-bottom: 8px dotted $subtext0;
         margin-block-start: 0;
         margin-block-end: 1rem;
     }
@@ -51,8 +51,10 @@ h3 {
 
 a {
     color: $blue;
+
     &:hover {
-        background-color:$yellow;
+        background-color: $yellow;
+        transition: background-color 0.1s, color 0.1s;
         //color: $pink;
     }
 }
@@ -66,6 +68,49 @@ hr {
     border-color: $surface2;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+.game {
+    background-color: $surface0;
+    margin-block: 1rem;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+
+    a {
+
+
+        img {
+            float: left;
+            height: 100%;
+            margin-block: 0;
+            margin-right: 15px;
+            opacity: 1;
+
+            &:hover{
+                opacity:0.8;
+                transition: opacity 0.25s;
+            }
+        }
+
+        h1 {
+            color: $blue;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    .game-content {
+        float: left;
+        width: calc(100% - 270px);
+    }
+
+    .post-meta {
+        color: $blue;
+        margin-bottom: -15px;
+    }
 }
 
 .header {
@@ -86,6 +131,8 @@ hr {
     mask-size: 100% calc(100% - var(--wave-height)), var(--wave-width) calc(var(--wave-height) * 2);
     mask-position: top, bottom;
     mask-repeat: no-repeat, repeat-x;
+
+    margin-bottom: -40px;
 
     .title {
         color: $yellow;
@@ -193,24 +240,54 @@ hr {
 
 .projects {
     display: flex;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    //margin-top: 1em;
+    //margin-bottom: 1em;
 
-    a {
-        opacity: 0.8;
-    }
-
-    a:not(:first-child) {
+    .project:not(:first-child) {
         margin-left: 10px;
     }
 
-    a:hover {
-        opacity: 1.0;
-        transition: opacity 0.25s, background 0.25s;
+    .project {
+        //margin-block: 1rem 1rem;
+        position: relative;
+
+        img {
+            opacity: 1.0;
+        }
+
+        a:hover {
+            background-color: transparent;
+        }
+
+        h2 {
+            position: absolute;
+            width: 95%;
+            left: 2.55%;
+            top: 20%;
+            font-size: 1.5rem;
+            //transform: translate(0, -50%);
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.25s, top 0.25s;
+        }
     }
 
-    img {
-        border-radius: 20px;
+    .project:hover {
+        h2 {
+            opacity: 1;
+            top: 10%;
+            transform: translate(0, -5px);
+        }
+
+        img {
+            opacity: 0.66;
+            transform: translate(0, -5px);
+            transition: opacity 0.25s, background 0.25s, transform 0.25s;
+        }
     }
 }
 
@@ -336,8 +413,7 @@ hr {
 .footer {
     background: #7b44d8;
     text-align: center;
-
-    padding-top:1px;
+    padding-top: 1px;
 
     p {
         font-style: italic;
@@ -485,7 +561,21 @@ blockquote:not(:has(+pre)) {
 
     h1 {
         font-size: 1.5rem;
-        a { text-decoration: none; }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    img {
+        margin-block: 0;
+        opacity: 0.8;
+    }
+
+    img:hover {
+        margin-block: 0;
+        opacity: 1;
+        transition: opacity 0.25s;
     }
 }
 

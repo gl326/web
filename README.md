@@ -1,5 +1,4 @@
-This is the source code for [chevyray.dev](https://chevyray.dev/), my personal blog
-where I write about game development and Rust, as well as various other things.
+This is the source code for [chevyray.dev](https://chevyray.dev/). I (Greg) stole it!!!!!! and shamelessly edited it to make a slightly different website. I don't know shit about web stuff but I learned a lot in the process, starting with the steps that Chevy wrote I have preserved below!.................
 
 This website is built using [Zola 0.19.1](https://www.getzola.org/), an open source
 static site generator built in Rust. For more information about how the website is

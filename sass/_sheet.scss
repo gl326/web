@@ -1,6 +1,6 @@
 html {
     font-family: 'regular', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 @media(max-width: 572px) {
@@ -148,12 +148,17 @@ hr {
                 &:hover {
                     color: $blue;
                 }
+
+                img{
+                    margin:auto;
+                }
             }
         }
 
         .sub {
             font-family: 'title', sans-serif;
             font-size: 1.3rem;
+            text-align:center;
         }
     }
 

@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="post-top">
-    <h1>{{ page.title | safe }}</h1>
+    <h1><!-- POST TITLE START -->{{ page.title | safe }}<!-- POST TITLE END --></h1>
     {{ macros::post_meta(page = page) }}
 </div>
 

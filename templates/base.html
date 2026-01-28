@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
+    {%- set og_img = {{ config.base_url | safe }} ~ "/img/og_preview.png" -%}
     {%- if section -%}
         {%- if section.title == "Home" -%}
             {%- set title = config.title -%}
@@ -16,6 +17,7 @@
         {%- set title = config.title ~ " | " ~ page.title -%}
         {%- set desc = page.description -%}
         {%- set url = page.permalink -%}
+        {% set og_img = macros::img_exists(path=page.path ~ "/1", default=og_img) -%}
     {%- else -%}
         {%- set title = config.title -%}
         {%- set desc = config.description -%}
@@ -28,7 +30,7 @@
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ desc }}">
     <meta property="og:url" content="{{ url | safe }}">
-    <meta property="og:image" content="{{ config.base_url | safe }}/img/og_preview.png" />
+    <meta property="og:image" content="{{ og_img }}" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@greg-wishes" />

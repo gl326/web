@@ -1,9 +1,10 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 
-    {%- set og_img = {{ config.base_url | safe }} ~ "/img/og_preview.png" -%}
+    {%- set og_img = config.base_url ~ "/img/og_preview.png" -%}
     {%- if section -%}
         {%- if section.title == "Home" -%}
             {%- set title = config.title -%}

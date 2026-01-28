@@ -18,7 +18,8 @@
         {%- set title = config.title ~ " | " ~ page.title -%}
         {%- set desc = page.description -%}
         {%- set url = page.permalink -%}
-        {% set og_img = macros::img_exists(path=page.path ~ "/1", default=og_img) -%}
+        {%- set my_img = macros::img_exists(path=page.path ~ "/1", default=og_img) -%}
+        {%- set og_img = my_img -%}
     {%- else -%}
         {%- set title = config.title -%}
         {%- set desc = config.description -%}

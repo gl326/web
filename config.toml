@@ -12,7 +12,7 @@ default_language = "en"
 compile_sass = true
 
 # Whether to minify the outputted HTML
-minify_html = true
+minify_html = false
 
 # Don't process assets of this type
 ignored_content = ["*.{ase,psd,afdesign}"]

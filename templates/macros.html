@@ -43,13 +43,13 @@
         <div><!-- class="crop-container">--><!--kjdhdj-->
             {% set img_url = macros::img_exists(path=page.path ~ "/1", default="/img/blog_dog.png") -%}
             {% set img_resized = resize_image(path= img_url , width=400, height=200, op="fill") %}
-            <a href="/{{ page.permalink }}"><img src= {{ img_resized.url }} ></a>
+            <a href="{{ page.permalink }}"><img src= {{ img_resized.url }} ></a>
         </div>       
-        <h1><a href="/{{ page.permalink }}">{{ page.title | safe }}</a></h1>
+        <h1><a href="{{ page.permalink }}">{{ page.title | safe }}</a></h1>
         {{ macros::post_meta(page = page) }}
         {% if page.summary %}
             {{ page.summary | safe }}
-            <a href="/{{ page.permalink }}">...read more</a>
+            <a href="{{ page.permalink }}">...read more</a>
         {% endif %}
     </div>
 {%- endmacro post_preview -%}
@@ -58,13 +58,13 @@
     {%- if paginator.number_pagers > 1 -%}
         <div class="pages">
             {%- if paginator.current_index != 1 -%}
-                <div><a href="/{{ permalink }}1"><i class="ri-arrow-left-double-fill"></i></a></div>
+                <div><a href="{{ permalink }}1"><i class="ri-arrow-left-double-fill"></i></a></div>
             {%- else -%}
                 <div><i class="ri-arrow-left-double-fill"></i></div>
             {%- endif -%}
 
             {%- if paginator.current_index > 1 -%}
-                <div><a href="/{{ permalink }}{{ paginator.current_index - 1 }}"><i class="ri-arrow-left-s-line"></i></a></div>
+                <div><a href="{{ permalink }}{{ paginator.current_index - 1 }}"><i class="ri-arrow-left-s-line"></i></a></div>
             {%- else -%}
                 <div><i class="ri-arrow-left-s-line"></i></div>
             {%- endif -%}
@@ -74,18 +74,18 @@
                 {%- if idx == paginator.current_index -%}
                     <div class="number"><span>{{ idx }}</span></div>
                 {%- else -%}
-                    <div class="number"><a href="/{{ permalink }}{{ idx }}"><span>{{ idx }}</span></a></div>
+                    <div class="number"><a href="{{ permalink }}{{ idx }}"><span>{{ idx }}</span></a></div>
                 {%- endif -%}
             {%- endfor -%}
 
             {%- if paginator.current_index < paginator.number_pagers -%}
-                <div><a href="/{{ permalink }}{{ paginator.current_index + 1 }}"><i class="ri-arrow-right-s-line"></i></a></div>
+                <div><a href="{{ permalink }}{{ paginator.current_index + 1 }}"><i class="ri-arrow-right-s-line"></i></a></div>
             {%- else -%}
                 <div><i class="ri-arrow-right-s-line"></i></div>
             {%- endif -%}
 
             {%- if paginator.current_index != paginator.number_pagers -%}
-                <div><a href="/{{ permalink }}{{ paginator.number_pagers }}"><i class="ri-arrow-right-double-fill"></i></a></div>
+                <div><a href="{{ permalink }}{{ paginator.number_pagers }}"><i class="ri-arrow-right-double-fill"></i></a></div>
             {%- else -%}
                 <div><i class="ri-arrow-right-double-fill"></i></div>
             {%- endif -%}

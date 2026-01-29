@@ -381,6 +381,9 @@ hr {
 
         .title {
             text-align: center;
+            .sub{
+                font-size:1.2rem;
+            }
         }
 
         .menu {
@@ -401,12 +404,12 @@ hr {
             }
 
             a {
-                font-size: 1.2rem;
-                line-height: 1.5rem;
+                font-size: 1rem;
+                line-height: 0.9rem;
             }
 
             i {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
 

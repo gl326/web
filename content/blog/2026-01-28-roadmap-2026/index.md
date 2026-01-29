@@ -83,3 +83,4 @@ We're working on an additional expansion called <strong>The Far Out</strong> whi
 </p>
 
 <p>...OK, no more questions! I gotta get back to work! But I expect I'll have to share soon that's more on the fun side.</p>
+<p>-Greg</p>

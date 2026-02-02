@@ -5,7 +5,9 @@ description = "Beastieball's development roadmap to 1.0!"
 
 [taxonomies]
 tags = ["beastieball"]
-# special tags: "musings" for devlog updates. "major-event" for only BIG NEW THINGS!
+# special tags: 
+# "musings" for devlog updates. 
+# "major-event" for only BIG NEW THINGS!
 
 +++
 <p>HELLO! It's been some time since our last newsletter update. Previously we were on Substack, but it had more than its fair share of annoying engagement farming strategies, and some of our subscribers didn't like them for various other reasons. So, to ring in the new year, we've migrated to a completely custom self-published blog and newsletter setup. This was... VERY annoying and difficult to do... and may not be perfect... but now it's done! And we've become much more independent from other services! <!--{{EMAIL ONLY}}Come bask in our <a href="http://wishesgames.com">shiny new website!</a>{{EMAIL ONLY}}--></p>
